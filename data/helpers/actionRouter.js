@@ -26,7 +26,7 @@ router.post('/', (req, res) =>{
         if (action)
         {Action.insert(req.body)
         .then(action =>{
-            res.status(200).json(action)
+            res.status(201).json(action)
         }
         )}
     })
@@ -62,3 +62,5 @@ router.delete('/:id', (req,res) =>{
         res.status(500).json({message: 'could not retrieve post'})
     })
 })
+
+module.exports = router;
